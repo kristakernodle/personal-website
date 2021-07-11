@@ -11,24 +11,27 @@
 
 <body>
   <header class="bg-customGrey-light p-5 px-3">
-    <nav class="flex items-center">
-      <a class="mr-auto" href="#">
-        <img class="w-28" src="./assets/icons/kernodle_logo.svg" alt="Krista Kernodle">
-      </a>
-      <div class="sm:hidden">
-        <button class="navbar-burger">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-      <ul class="hidden">
-        <li class="mb-1">
-          <a class="nav-button" href="#"></a>Home</li>
-        <li class="mb-1">
-          <a class ="nav-button" href="#"></a>Home2</li>
-      </ul>
-    </nav>
+
+      <nav class="container mx-auto flex w-11/12 lg:max-w-6xl">
+        <a class="mr-auto" href="#">
+          <img class="w-28" src="./assets/icons/kernodle_logo.svg" alt="Krista Kernodle">
+        </a>
+        <div class="sm:hidden">
+          <button class="navbar-burger">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex gap-2">
+          <a class="nav-button" href="#">Home</a>
+          <a class="nav-button" href="#">Resume</a>
+          <a class="nav-button" href="#">Dissertation</a>
+          <a class="nav-button" href="#">Projects</a>
+        </div>
+      </nav>
+
+
     <div class="navbar-menu hidden">
       <div class="navbar-backdrop fixed inset-0 bg-customGrey-dark opacity-75"></div>
       <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 bg-customGrey-light overflow-y-auto">
@@ -54,7 +57,7 @@
               <a class ="nav-button" href="#">Dissertation</a>
             </li>
             <li class="mb-3">
-              <a class ="nav-button" href="#">Technical Projects</a>
+              <a class ="nav-button" href="#">Projects</a>
             </li>
           </ul>
         </div>
@@ -64,59 +67,71 @@
       </nav>
   
     </div>
-    <div class="hidden sm:flex sm:gap-2">
-      <a class="nav-button" href="#">Krista</a>
-      <a class="nav-button" href="#">Resume</a>
-      <a class="nav-button" href="#">Dissertation</a>
-      <a class="nav-button" href="#">Technical Projects</a>
-    </div>
   </header>
 
   <main>
-    <div class="container mx-auto text-center border-customGrey-dark border-2 w-11/12 p-4 m-4">
+    <div class="container mx-auto text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 lg:max-w-6xl">
       <h1 class="text-customBlue text-3xl">Krista Kernodle</h1>
       <p class="text-xl">Scientist | Intrapraneur | Developer</p>
     </div>
 
-      <div class="container mx-auto w-11/12"> 
-        <img class="mx-auto max-w-sm p-4" src="./assets/images/scienceHero.jpg" alt="Science Heros">
-        <div class="mx-auto border-customGrey-dark bg-customGrey-light text-customBlack p-4 w-11/12">
+      <div class="container mx-auto max-w-md w-11/12 md:flex md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-6xl"> 
+        <img class="mx-auto max-w-xs md:object-scale-down lg:max-w-sm xl:max-w-md 2xl:max-w-lg p-4" src="./assets/images/scienceHero.jpg" alt="Science Heros">
+        <div class="mx-auto border-customGrey-dark bg-customGrey-light text-customBlack p-4 w-11/12 md:w-1/2">
           <p class="p-2">Krista is finishing her PhD in neuroscience at the University of Michigan in the labs of Daniel Leventhal and William Dauer. Her work has focused on understanding the neural basis for Dystonia using animal models.</p>
           <p class="p-2">Krista is also currently a consultant at miLEAD consulting, a non-profit organization providing business consulting to the Ann Arbor area. During her time as a consultant, Krista has provided expertise in medical technology markets and the vehicle manufacturing market.</p>
           <p class="p-2">Prior to beginning with miLEAD, Krista was part of a student led venture capital fund at UM, the Wolverine Venture Fund. In the three years she spent on the fund, Krista reviewed companies for investment, pitched deals, and made investment decisions. She also taught several education sessions to other fund members, including term sheet review, investment return, and basic finance.</p>
+          <div class="md:hidden xl:block container mx-auto text-center items-center p-4 max-w-sm 2xl:mt-20">
+            <p class="text-xl font-bold pb-4">Find me on social media!</p>
+            <div class="container mx-auto flex justify-around max-w-sm">
+              <a href="https://www.linkedin.com/in/kristakernodle/" target="_blank" rel='noopener'>
+                <img class="w-16" src="./assets/icons/iconLinkedin.svg" alt="LinkedIn">
+              </a>
+              
+              <a href="https://www.instagram.com/maynerdy" target="_blank" rel='noopener'>
+                <img class="w-16" src="./assets/icons/iconInstagram.svg" alt="Instagram">
+              </a>
+              
+              <a href="https://github.com/kristakernodle" target="_blank" rel='noopener'>
+                <img class="w-16" src="./assets/icons/iconGithub.svg" alt="GitHub">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-    <div class="container mx-auto text-center items-center p-4">
-      <p class="text-xl pb-4">Find me on social media!</p>
-      <div class="container mx-auto flex justify-around max-w-sm">
-        <a href="https://www.linkedin.com/in/kristakernodle/" target="_blank" rel='noopener'>
-          <img class="w-16" src="./assets/icons/iconLinkedin.svg" alt="LinkedIn">
-        </a>
-        
-        <a href="https://www.instagram.com/maynerdy" target="_blank" rel='noopener'>
-          <img class="w-16" src="./assets/icons/iconInstagram.svg" alt="Instagram">
-        </a>
-        
-        <a href="https://github.com/kristakernodle" target="_blank" rel='noopener'>
-          <img class="w-16" src="./assets/icons/iconGithub.svg" alt="GitHub">
-        </a>
+    <div class="flex justify-center">
+      <div class="hidden md:inline-block xl:hidden container mx-auto text-center p-4">
+          <p class="text-xl pb-4">Find me on social media!</p>
+          <div class="container mx-auto flex justify-around max-w-sm">
+            <a href="https://www.linkedin.com/in/kristakernodle/" target="_blank" rel='noopener'>
+              <img class="w-16" src="./assets/icons/iconLinkedin.svg" alt="LinkedIn">
+            </a> 
+            <a href="https://www.instagram.com/maynerdy" target="_blank" rel='noopener'>
+              <img class="w-16" src="./assets/icons/iconInstagram.svg" alt="Instagram">
+            </a>
+            
+            <a href="https://github.com/kristakernodle" target="_blank" rel='noopener'>
+              <img class="w-16" src="./assets/icons/iconGithub.svg" alt="GitHub">
+            </a>
+          </div>
+
       </div>
     </div>
 
-    <div class="container mx-auto text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 pb-6">
-      <p class="text-customBlue text-3xl p-2 pb-5">Interested in full-time positions with companies seeking a strategic thinker.</p>
-      <a class="button-grey-dark text-3xl" href="./assets/documents/KristaKernodle_Resume.pdf" target="_blank">Resume</a>
+    <div class="container mx-auto items-center text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 pb-6 md:flex md:justify-center lg:gap-20 lg:max-w-6xl">
+      <p class="text-customBlue text-3xl p-2 pb-5 md:text-center md:max-w-lg">Interested in full-time positions with companies seeking a strategic thinker.</p>
+      <a class="button-grey-dark text-3xl md:m-10" href="./assets/documents/KristaKernodle_Resume.pdf" target="_blank">Resume</a>
     </div>
 
-    <div class="container mx-auto text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 mt-6 pb-6">
-      <p class="text-customBlack text-xl p-1 pb-5">I developed an Arduino-based animal task and performed a series of experiments and analyses to examine behavioral outcomes in a mouse model of Dystonia.</p>
-      <a class="button-grey-dark text-3xl" href="#" target="_blank">Dissertation</a>
+    <div class="container mx-auto items-center text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 mt-6 pb-6 md:flex flex-row-reverse md:justify-center lg:gap-20 lg:max-w-6xl">
+      <p class="text-customBlack text-xl p-1 pb-5 md:text-left md:max-w-lg">I developed an Arduino-based animal task and performed a series of experiments and analyses to examine behavioral outcomes in a mouse model of Dystonia.</p>
+      <a class="button-grey-dark text-3xl md:m-10" href="#" target="_blank">Dissertation</a>
     </div>
 
-    <div class="container mx-auto text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 mt-6 mb-6 pb-6">
-      <p class="text-customBlack text-xl p-1 pb-5">While working on my dissertation, I have contributed to several development projects. My roles have ranged from junior developer to data engineer.</p>
-      <a class="button-grey-dark text-3xl" href="#" target="_blank">Technical Projects</a>
+    <div class="container mx-auto items-center text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 mt-6 mb-6 pb-6 md:flex md:justify-center lg:gap-20 lg:max-w-6xl">
+      <p class="text-customBlack text-xl p-1 pb-5 md:text-right md:max-w-lg">While working on my dissertation, I have contributed to several development projects. My roles have ranged from junior developer to data engineer.</p>
+      <a class="button-grey-dark text-3xl md:m-10" href="#" target="_blank">Projects</a>
     </div>
   </main>
 
