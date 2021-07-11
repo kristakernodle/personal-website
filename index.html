@@ -3,20 +3,69 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Krista Kernodle</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <header class="flex justify-between bg-customGrey-light p-5 px-3">
-    <div>
-      <img width="100" src="./assets/icons/kernodle_logo.svg" alt="Krista Kernodle">
+  <header class="bg-customGrey-light p-5 px-3">
+    <nav class="flex items-center">
+      <a class="mr-auto" href="#">
+        <img class="w-28" src="./assets/icons/kernodle_logo.svg" alt="Krista Kernodle">
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <ul class="hidden">
+        <li class="mb-1">
+          <a class="nav-button" href="#"></a>Home</li>
+        <li class="mb-1">
+          <a class ="nav-button" href="#"></a>Home2</li>
+      </ul>
+    </nav>
+    <div class="navbar-menu hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-customGrey-dark opacity-75"></div>
+      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 bg-customGrey-light overflow-y-auto">
+        <div class="flex items-center m-3 mt-5">
+          <a class="mr-auto" href="#">
+            <img class="w-28" src="./assets/icons/kernodle_logo.svg" alt="Krista Kernodle">
+          </a>
+          <button class="navbar-close -mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="m-3 text-2xl">
+          <ul>
+            <li class="mb-3">
+              <a class="nav-button" href="#">Home</a>
+            </li>
+            <li class="mb-3">
+              <a class ="nav-button" href="#">Resume</a>
+            </li>
+            <li class="mb-3">
+              <a class ="nav-button" href="#">Dissertation</a>
+            </li>
+            <li class="mb-3">
+              <a class ="nav-button" href="#">Technical Projects</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <p class="text-customGrey-dark text-center">Copyright © 2021</p>
+        </div>
+      </nav>
+  
     </div>
-    
-    <div class="flex item-center gap-2">
-      <a class="nav-button" href="#">Krista Kernodle</a>
+    <div class="hidden">
+      <a class="nav-button" href="#">Krista</a>
       <a class="nav-button" href="#">Resume</a>
       <a class="nav-button" href="#">Dissertation</a>
       <a class="nav-button" href="#">Technical Projects</a>
@@ -79,7 +128,51 @@
       <a href="https://www.instagram.com/maynerdy" target="_blank" rel='noopener'><img class="w-7" src="./assets/icons/iconInstagram.svg" alt="Instagram"></a>
       <a href="https://github.com/kristakernodle" target="_blank" rel='noopener'><img class="w-7" src="./assets/icons/iconGithub.svg" alt="GitHub"></a>
     </div>
-    <p class="text-customWhite text-sm pt-4">© Krista Kernodle 2021 | shury.tech</p>
+    <p class="text-customWhite text-sm pt-4">Copyright © Krista Kernodle 2021 | shury.tech</p>
   </footer>
 </body>
+
+<script>
+  // Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+</script>
+
 </html>
