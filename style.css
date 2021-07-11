@@ -1,0 +1,18 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-text {
+  color: rgb(0, 0, 0);
+}
+
+.nav-button {
+  @apply bg-customGrey-light p-1 my-auto rounded-2xl hover:bg-customWhite text-customGrey-dark
+}
+
+.button-grey-dark {
+  @apply bg-customGrey-dark p-2 my-auto rounded-xl hover:bg-customBlack text-customWhite
+}
+
+
