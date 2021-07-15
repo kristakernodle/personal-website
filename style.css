@@ -3,16 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
-.header-text {
-  color: rgb(0, 0, 0);
+@layer components {
+
+  .header-text {
+    color: rgb(0, 0, 0);
+  }
+  
+  .nav-button {
+    @apply bg-customGrey-light p-1 my-auto rounded-2xl hover:bg-customWhite text-customGrey-dark
+  }
+  
+  .button-grey-dark {
+    @apply bg-customGrey-dark p-2 my-auto rounded-xl hover:bg-customBlue text-customWhite
+  }
+  
+  .info-div {
+    @apply container mx-auto items-center text-center border-customGrey-dark border-2 w-11/12 p-4 m-4 pb-6 md:flex md:justify-center lg:gap-20 lg:max-w-6xl
+  }
+
+  .div-primary {
+    @apply container mx-auto text-center bg-customGrey-light bg-opacity-25 border-customGrey-dark border-2 w-11/12 p-4 m-4 lg:max-w-6xl
+  }
+
 }
 
-.nav-button {
-  @apply bg-customGrey-light p-1 my-auto rounded-2xl hover:bg-customWhite text-customGrey-dark
-}
-
-.button-grey-dark {
-  @apply bg-customGrey-dark p-2 my-auto rounded-xl hover:bg-customBlack text-customWhite
-}
 
 
