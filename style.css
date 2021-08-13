@@ -4,6 +4,13 @@
 @tailwind utilities;
 
 @layer components {
+  .fa-star {
+      color: rgb(18, 108, 178);
+  }
+
+  .fa-star-half-empty {
+      color: rgb(18, 108, 178);
+  }
 
   .header-text {
     color: rgb(0, 0, 0);
@@ -26,6 +33,7 @@
   }
 
 }
+
 
 
 
